@@ -1,0 +1,22 @@
+{
+  "name": "vuefusesearchfield",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/VueFuseSearchField.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fuse.js": "^5.0.9-beta"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qvvdata/VueFuseSearchField.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/qvvdata/VueFuseSearchField/issues"
+  },
+  "homepage": "https://github.com/qvvdata/VueFuseSearchField#readme"
+}
