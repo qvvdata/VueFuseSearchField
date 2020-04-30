@@ -16,7 +16,7 @@
                 v-for="(r,index) in results.filter((r, index) => index < 6)"
                 @click="select(r)"
                 @mouseover="highlight_index=index"
-                :key="r.gkz">
+                :key="element_key(r)">
                 <slot v-bind:result="r">
                 </slot>
             </div>
@@ -34,6 +34,7 @@ export default {
     props: [
         'list',
         'search_keys',
+        'element_key',
         'defaultAll',
         'placeholder',
     ],
