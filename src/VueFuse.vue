@@ -3,6 +3,7 @@
     type="search"
     ref="search_field"
     v-model="value"
+    autocomplete="chrome-off"
     :placeholder="placeholder"
     :class="{active: is_active, qvvdatasearchfield: true}"
     @focus="activate"

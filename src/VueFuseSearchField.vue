@@ -103,4 +103,13 @@ export default {
 .vuefusesearchfield >>> input::placeholder {
   font-family: Sailec, sans-serif;
 }
+
+.vuefusesearchfield >>> input {
+  width: 100%;
+  border: 1px solid grey;
+  margin: 0;
+  font-size: 14px;
+  padding-bottom: 2px;
+  font-weight: normal;
+}
 </style>
