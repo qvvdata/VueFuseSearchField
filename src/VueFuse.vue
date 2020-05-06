@@ -3,7 +3,7 @@
     type="search"
     ref="search_field"
     v-model="value"
-    autocomplete="chrome-off"
+    autocomplete="new-password"
     :placeholder="placeholder"
     :class="{active: is_active, qvvdatasearchfield: true}"
     @focus="activate"
@@ -11,6 +11,7 @@
     @input="value=$event.target.value"
     @blur="deactivate"
     :id="input_id?input_id:undefined"
+    name="random_name_bla"
     >
 </template>
 <script>
@@ -219,17 +220,3 @@ export default {
   }
 }
 </script>
-
-<style >
-.qvvdatasearchfield::placeholder {
-  font-weight: normal;
-  color: black;
-  -webkit-text-fill-color: black;
-  font-family: Sailec, sans-serif;
-}
-.qvvdatasearchfield.active::placeholder {
-  font-weight: normal;
-  color: grey;
-  -webkit-text-fill-color: grey;
-}
-</style>

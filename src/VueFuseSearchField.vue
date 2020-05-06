@@ -73,12 +73,15 @@ export default {
 </script>
 
 <style scoped>
+.vuefusesearchfield {
+    position: relative;
+    margin-top: 10px;
+}
 
 .vuefusesearchfield .results {
   width: 100%;
-  max-width: 450px;
   position: absolute;
-  border: 1px solid #333;
+  background: rgb(246, 244, 243);
   border-bottom: none;
   box-sizing: border-box;
   color: black;
@@ -86,30 +89,41 @@ export default {
 }
 
 .vuefusesearchfield .results .r {
-  border-bottom: 1px solid black;
-  padding: 5px 10px;
+  /*border-bottom: 1px solid black;*/
+  padding: 6px 8px;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.8)
 }
 
 .vuefusesearchfield .results >>> .r.highlight {
-  background: #A0968B;
+  background: rgb(160, 150, 140);
 }
-.vuefusesearchfield >>> input {
-  font-family: Sailec, sans-serif;
-  line-height: 19px;
-  margin-top: -1px;
+.vuefusesearchfield >>> input.qvvdatasearchfield {
+  background: rgb(246, 244, 243);
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(59, 58, 57);
+  margin: 0;
+  padding: 4px 8px;
+  font-weight: normal;
+  font-family: Meriva, sans-serif;
+  line-height: 24px;
+  font-size: 16px;
+  color: rgb(59, 58, 57);
+  -webkit-text-fill-color: rgb(59, 58, 57);
+  font-weight: bold;
 }
-.vuefusesearchfield >>> input::placeholder {
-  font-family: Sailec, sans-serif;
+.vuefusesearchfield >>> input.qvvdatasearchfield::placeholder {
+  font-family: Meriva, sans-serif;
+  font-weight: normal;
+  color: rgb(59, 58, 57);
+  -webkit-text-fill-color: rgb(59, 58, 57);
 }
 
-.vuefusesearchfield >>> input {
-  width: 100%;
-  border: 1px solid grey;
-  margin: 0;
-  font-size: 14px;
-  padding-bottom: 2px;
+.vuefusesearchfield >>> input.qvvdatasearchfield.active::placeholder {
+  font-family: Meriva, sans-serif;
   font-weight: normal;
+  color: rgb(160, 150, 140);
+  -webkit-text-fill-color: rgb(160, 150, 140);
 }
 </style>
