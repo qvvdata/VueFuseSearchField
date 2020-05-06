@@ -1,18 +1,26 @@
 <template>
-  <input
-    type="search"
-    ref="search_field"
-    v-model="value"
-    autocomplete="new-password"
-    :placeholder="placeholder"
-    :class="{active: is_active, qvvdatasearchfield: true}"
-    @focus="activate"
-    @keydown="forwardArrowkey"
-    @input="value=$event.target.value"
-    @blur="deactivate"
-    :id="input_id?input_id:undefined"
-    name="random_name_bla"
-    >
+  <div style="position: relative" :class="{is_active}">
+    <input
+      type="search"
+      ref="search_field"
+      v-model="value"
+      autocomplete="new-password"
+      :placeholder="placeholder"
+      :class="{active: is_active, qvvdatasearchfield: true}"
+      @focus="activate"
+      @keydown="forwardArrowkey"
+      @input="value=$event.target.value"
+      @blur="deactivate"
+      :id="input_id?input_id:undefined"
+      name="random_name_bla"
+      >
+      <div class="search_icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5C7.68629 5 5 7.68629 5 11C5 14.3137 7.68629 17 11 17C14.3137 17 17 14.3137 17 11C17 7.68629 14.3137 5 11 5ZM3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11Z" fill="#3B3A39"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2929 15.2929C15.6834 14.9024 16.3166 14.9024 16.7071 15.2929L20.7071 19.2929C21.0976 19.6834 21.0976 20.3166 20.7071 20.7071C20.3166 21.0976 19.6834 21.0976 19.2929 20.7071L15.2929 16.7071C14.9024 16.3166 14.9024 15.6834 15.2929 15.2929Z" fill="#3B3A39"/>
+          </svg>
+      </div>
+  </div>
 </template>
 <script>
 // originally taken from https://github.com/shayneo/vue-fuse/blob/master/src/components/VueFuse.vue at 20a56de
@@ -220,3 +228,21 @@ export default {
   }
 }
 </script>
+<style scoped>
+.search_icon {
+    position: absolute;
+    right: 6px;
+    top: 5px;
+}
+
+.is_active .search_icon path {
+  fill: grey;
+}
+
+.qvvdatasearchfield[type="search"]::-webkit-search-decoration,
+.qvvdatasearchfield[type="search"]::-webkit-search-cancel-button,
+.qvvdatasearchfield[type="search"]::-webkit-search-results-button,
+.qvvdatasearchfield[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+</style>

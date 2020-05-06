@@ -105,6 +105,7 @@ export default {
   border-bottom: 2px solid rgb(59, 58, 57);
   margin: 0;
   padding: 4px 8px;
+  padding-right: 30px;
   font-weight: normal;
   font-family: Meriva, sans-serif;
   line-height: 24px;
