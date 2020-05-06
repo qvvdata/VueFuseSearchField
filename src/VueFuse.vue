@@ -233,6 +233,7 @@ export default {
     position: absolute;
     right: 6px;
     top: 5px;
+    pointer-events: none;
 }
 
 .is_active .search_icon path {
