@@ -112,6 +112,8 @@ export default {
   color: rgb(59, 58, 57);
   -webkit-text-fill-color: rgb(59, 58, 57);
   font-weight: bold;
+  -webkit-appearance: textfield;
+  outline: none;
 }
 .vuefusesearchfield >>> input.qvvdatasearchfield::placeholder {
   font-family: Meriva, sans-serif;
